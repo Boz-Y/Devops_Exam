@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>tn.esprit</groupId>
-    <artifactId>DevOps_Project</artifactId>
+    <artifactId>DevOps_Exam</artifactId>
     <version>2.1</version>
-    <name>DevOps_Project</name>
-    <description>DevOps_Project</description>
+    <name>DevOps_Exam</name>
+    <description>DevOps_Exam</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -52,6 +52,7 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
+
     <distributionManagement>
         <repository>
             <id>deploymentRepo</id>
@@ -60,6 +61,7 @@
 
         </repository>
     </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
@@ -74,17 +76,10 @@
                     </excludes>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.0</version> <!-- Utilisez la version la plus récente du plugin -->
-                <configuration>
-                    <source>11</source> <!-- Version de Java source -->
-                    <target>11</target> <!-- Version de Java cible -->
-                </configuration>
-            </plugin>
         </plugins>
     </build>
+
+
     <profiles>
         <profile>
             <id>dev</id>
@@ -104,4 +99,6 @@
             </properties>
         </profile>
     </profiles>
+
+
 </project>
